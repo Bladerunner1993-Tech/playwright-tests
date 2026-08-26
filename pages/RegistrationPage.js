@@ -11,7 +11,7 @@ class RegistrationPage {
   }
 
   async open() {
-    await this.page.goto('https://qauto.forstudy.space/');
+    await this.page.goto('/');
     await this.signUpBtn.click();
   }
 

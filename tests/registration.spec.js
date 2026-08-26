@@ -1,9 +1,5 @@
 const { test, expect } = require('@playwright/test');
 
-test.use({
-  httpCredentials: { username: 'guest', password: 'welcome2qauto' },
-});
-
 test.beforeEach(async ({ page }) => {
   await page.goto('https://qauto.forstudy.space/');
   await page.getByRole('button', { name: 'Sign up' }).click();
