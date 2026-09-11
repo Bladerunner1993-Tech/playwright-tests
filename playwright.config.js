@@ -25,12 +25,12 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: process.env.BASE_URL,
+    baseURL: process.env.BASE_URL || 'https://qauto.forstudy.space',
 
     /* HTTP credentials for basic auth, loaded from .env */
     httpCredentials: {
-      username: process.env.AUTH_USER,
-      password: process.env.AUTH_PASS,
+      username: process.env.AUTH_USER || 'guest',
+      password: process.env.AUTH_PASS || 'welcome2qauto',
     },
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
